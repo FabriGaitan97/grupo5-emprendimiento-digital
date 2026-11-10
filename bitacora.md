@@ -1,12 +1,12 @@
-Bitácora diaria - Grupo 5 
-Día 1 - 09/11/2026
+# Bitácora diaria - Grupo 5 
+## Día 1 - 09/11/2026
 Qué hicimos:
 - Creamos el repositorio en GitHub y sumamos a todos los integrantes como colaboradores.
 - Armamos el tablero Kanban en Trello (Por hacer → En curso → Hecho) y cargamos las tarjetas del Día 1 con sus descripciones.
 - Elegimos el tema: **Clase 8 – Sets, Queues y Stacks.**
 - Elegimos el emprendimiento: **barbería**.
 - Redactamos el README inicial (con el enlace al tablero) y enviamos los enlaces del repositorio y del tablero a la docente.
-Roles:
+Quién hizo qué:
 - Fabrizio Gaitán: creó el repositorio en GitHub y el tablero Kanban en Trello.
 - Martina Noel Fernandez: sumó a los colaboradores al repositorio y propuso el tema a abordar. 
 - Paul Ezequiel Ferreyra Jaime: redactó el README inicial y envió los enlaces a la docente; intentó anotar el tema en la planilla del curso.
