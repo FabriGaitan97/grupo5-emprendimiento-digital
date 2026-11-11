@@ -56,8 +56,14 @@ El proyecto aplicará estas estructuras de datos para:
 
 ## Organización del proyecto
 
-La documentación, el código fuente, las pruebas y la bitácora se incorporarán progresivamente a este repositorio.
+README.md: presentación del proyecto
+bitacora.md: avance diario
+/docs: análisis y diseño
+/src: código (**a partir del Día 4**)
+/pruebas: casos de prueba (**Día 6**)
+/kanban: capturas diarias del tablero
 
 ## Estado del proyecto
+Día 2: análisis de requerimientos por módulo.
 
 En etapa de planificación y análisis de requerimientos.
