@@ -6,13 +6,16 @@ Qué hicimos:
 - Elegimos el tema: **Clase 8 – Sets, Queues y Stacks.**
 - Elegimos el emprendimiento: **barbería**.
 - Redactamos el README inicial (con el enlace al tablero) y enviamos los enlaces del repositorio y del tablero a la docente.
+
 Quién hizo qué:
 - Fabrizio Gaitán: creó el repositorio en GitHub y el tablero Kanban en Trello.
 - Martina Noel Fernandez: sumó a los colaboradores al repositorio y propuso el tema a abordar. 
 - Paul Ezequiel Ferreyra Jaime: redactó el README inicial y envió los enlaces a la docente; intentó anotar el tema en la planilla del curso.
 - Todo el grupo: elegimos el emprendimiento (barbería) en conjunto.
+
 Qué nos trabó:
 - No tuvimos acceso a la planilla del curso para anotar nuestro tema y emprendimiento, así que esa tarea quedó pendiente (el tema está elegido, falta el registro).
+
 Qué sigue:
 - Conseguir acceso a la planilla y registrar el tema (clase 8) y el emprendimiento (barbería) del grupo.
 - Día 2 (análisis): definir requerimientos e historias de usuario, y subir el análisis a /docs.
