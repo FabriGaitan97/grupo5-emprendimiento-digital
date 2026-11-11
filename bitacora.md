@@ -37,7 +37,7 @@ Qué hicimos:
 
 Quién hizo qué:
 - Fabrizio Gaitán: análisis del módulo 4 (historial y reportes), adaptación y subida del análisis del módulo 1 (clientes), borradores de los diagramas de flujo y de clases, reparto de paquetes de código, corrección del README y reorganización del tablero.
-- Martina Noel Fernandez: análisis del módulo 2 (gestión de turnos) adaptación y subida del análisis del módulo 1 (clientes), borradores de los diagramas de flujo y de clases,  y actualización del README con el problema que resuelve.
+- Martina Noel Fernandez: - Martina Noel Fernandez: análisis del módulo 2 (gestión de turnos), actualización del README con el problema que resuelve, reorganización del reparto del trabajo junto con Fabrizio, actualización de sus tarjetas del tablero y captura del tablero del día 2.
 - Kaiken Luciano Garcia Segovia: análisis del módulo 3 (servicios y atención).
 - Paul Ezequiel Ferreyra Jaime: propuesta inicial del módulo de clientes (reglas de negocio y validaciones), que se usó como base del análisis del módulo 1, y registro del tema en la planilla del curso.
 
@@ -48,4 +48,5 @@ Qué nos trabó:
 Qué sigue:
 - Día 3 (diseño): subir a /docs el diagrama de flujo y el diagrama de clases definitivos, y crear el esqueleto del proyecto en /src.
 - Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos).
+
 Captura del tablero: kanban/dia-2.png
