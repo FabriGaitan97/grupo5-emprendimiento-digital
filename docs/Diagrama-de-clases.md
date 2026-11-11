@@ -134,8 +134,6 @@ Recorrido completo de cada opción: desde que el barbero la elige en el menú ha
 | Menú y agenda (C, F, H) | `Main`, `Menu`, `Servicio`, `Agenda` | Kaiken |
 | Atención e historial (G, B, I, J) | `Atencion`, `Operacion`, `TipoOperacion`, `Historial`, `Barberia` | Fabrizio |
 
-`Barberia` la arma Fabrizio y cada integrante agrega los pasos de sus opciones del menú.
-
 ## Detalle de cada clase
 
 ### Paquete `modelo`
