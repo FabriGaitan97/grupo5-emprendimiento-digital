@@ -30,7 +30,7 @@ Llevar la barbería "de memoria" o en un cuaderno genera problemas concretos:
 - No recordar cuál fue el último corte de cada cliente.
 - Errores al reservar o cancelar un turno que no se pueden corregir fácilmente.
 
-El programa organiza la agenda sin superposiciones, mantiene los clientes sin duplicados, atiende los turnos en el orden correcto y permite deshacer la última reserva o cancelación.
+El programa organiza la agenda sin superposiciones, mantiene los clientes sin duplicados, atiende los turnos en el orden correcto y permite deshacer el último turno o cancelación.
 
 ## Tema técnico seleccionado
 
