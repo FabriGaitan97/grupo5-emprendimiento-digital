@@ -36,11 +36,15 @@ El programa organiza la agenda sin superposiciones, mantiene los clientes sin du
 
 **Clase 8: Sets, Queues y Stacks.**
 
-El proyecto aplicará estas estructuras de datos para:
+El proyecto aplica estas estructuras de datos para:
 
-- **Set:** administrar clientes y evitar registros duplicados.
-- **Queue:** organizar los turnos respetando el orden de llegada.
-- **Stack:** conservar un historial de operaciones.
+- **Set:**
+  - Clientes sin celular repetido (`Set<Cliente>`).
+  - Turnos sin horarios superpuestos (`Set<Turno>`).
+- **Queue (PriorityQueue):** atender los turnos según su día y hora, no según el orden en que se reservaron (`PriorityQueue<Turno>`).
+- **Stack:**
+  - Deshacer la última reserva o cancelación de un turno (pila de operaciones).
+  - Recordar "lo de siempre": el último corte de cada cliente (pila de cortes).
 
 ## Tecnologías y herramientas
 
