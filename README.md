@@ -20,6 +20,18 @@
 
 Barbería Digital es un emprendimiento ficticio que busca organizar y administrar la gestión de clientes y turnos de una barbería mediante un sistema desarrollado en Java.
 
+## Problema que resuelve
+
+Llevar la barbería "de memoria" o en un cuaderno genera problemas concretos:
+
+- Dos clientes reservados en el mismo horario.
+- Clientes registrados más de una vez.
+- Turnos que se atienden en el orden en que se reservaron y no según su día y hora.
+- No recordar cuál fue el último corte de cada cliente.
+- Errores al reservar o cancelar un turno que no se pueden corregir fácilmente.
+
+El programa organiza la agenda sin superposiciones, mantiene los clientes sin duplicados, atiende los turnos en el orden correcto y permite deshacer la última reserva o cancelación.
+
 ## Tema técnico seleccionado
 
 **Clase 8: Sets, Queues y Stacks.**
