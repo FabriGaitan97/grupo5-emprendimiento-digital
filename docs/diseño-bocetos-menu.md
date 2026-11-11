@@ -119,7 +119,7 @@ Día y hora (dd/MM/yyyy HH:mm): > _
 **Turno que existe**
 
 ```text
---- CANCELAR TURNO ---
+- CANCELAR TURNO -
 Día y hora del turno (dd/MM/yyyy HH:mm): > 17/11/2026 10:30
 
 Turno cancelado: Mar 17/11 10:30 – Juan Pérez – Corte
@@ -129,7 +129,7 @@ El horario quedó libre.
 **Turno que no existe**
 
 ```text
---- CANCELAR TURNO ---
+- CANCELAR TURNO -
 Día y hora del turno (dd/MM/yyyy HH:mm): > 19/11/2026 12:00
 
 No hay ningún turno reservado en ese horario.
@@ -156,7 +156,7 @@ Turno retirado de la agenda.
 **Cliente que viene por primera vez**
 
 ```text
---- ATENDER SIGUIENTE ---
+- ATENDER SIGUIENTE -
 Próximo turno: Mié 18/11 15:00 – Ana Díaz – Barba
 Lo de siempre: Sin cortes registrados
 
