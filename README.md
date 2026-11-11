@@ -57,10 +57,15 @@ El proyecto aplicará estas estructuras de datos para:
 ## Organización del proyecto
 
 README.md: presentación del proyecto
+
 bitacora.md: avance diario
+
 /docs: análisis y diseño
+
 /src: código (**a partir del Día 4**)
+
 /pruebas: casos de prueba (**Día 6**)
+
 /kanban: capturas diarias del tablero
 
 ## Estado del proyecto
