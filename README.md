@@ -11,7 +11,7 @@
 
 ## Integrantes
 
-1. Paul Ferreyra Jaime
+1. Paul Ferreyra Jaime (dejó la materia el 10/11/2026)
 2. Martina Noel Fernandez
 3. Fabrizio Gaitán
 4. Kaiken Luciano Garcia Segovia
