@@ -34,11 +34,13 @@ Qué hicimos:
 - Actualizamos el README con el problema que resuelve y las estructuras del tema.
 - Reorganizamos el tablero Kanban con las tarjetas de los días 4 y 5.
 - Registramos el tema (Clase 8) y el emprendimiento en la planilla del curso.
+
 Quién hizo qué:
 - Fabrizio Gaitán: análisis del módulo 4 (historial y reportes), adaptación y subida del análisis del módulo 1 (clientes), borradores de los diagramas de flujo y de clases, reparto de paquetes de código, corrección del README y reorganización del tablero.
 - Martina Noel Fernandez: análisis del módulo 2 (gestión de turnos) adaptación y subida del análisis del módulo 1 (clientes), borradores de los diagramas de flujo y de clases,  y actualización del README con el problema que resuelve.
 - Kaiken Luciano Garcia Segovia: análisis del módulo 3 (servicios y atención).
 - Paul Ezequiel Ferreyra Jaime: propuesta inicial del módulo de clientes (reglas de negocio y validaciones), que se usó como base del análisis del módulo 1, y registro del tema en la planilla del curso.
+
 Qué nos trabó:
 - Paul Ferreyra Jaime dejó la materia; reorganizamos el trabajo entre los tres integrantes que seguimos.
 - El primer diseño era demasiado grande para el tiempo disponible; lo recortamos a un MVP y dejamos el resto como mejoras futuras.
