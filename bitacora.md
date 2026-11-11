@@ -37,7 +37,7 @@ Qué hicimos:
 
 Quién hizo qué:
 - Fabrizio Gaitán: análisis del módulo 4 (historial y reportes), adaptación y subida del análisis del módulo 1 (clientes), borradores de los diagramas de flujo y de clases, reparto de paquetes de código, corrección del README y reorganización del tablero.
-- Martina Noel Fernandez: - Martina Noel Fernandez: análisis del módulo 2 (gestión de turnos), actualización del README con el problema que resuelve, reorganización del reparto del trabajo junto con Fabrizio, actualización de sus tarjetas del tablero y captura del tablero del día 2.
+- Martina Noel Fernandez: análisis del módulo 2 (gestión de turnos), actualización del README con el problema que resuelve, reorganización del reparto del trabajo junto con Fabrizio, actualización de sus tarjetas del tablero y captura del tablero del día 2.
 - Kaiken Luciano Garcia Segovia: análisis del módulo 3 (servicios y atención).
 - Paul Ezequiel Ferreyra Jaime: propuesta inicial del módulo de clientes (reglas de negocio y validaciones), que se usó como base del análisis del módulo 1, y registro del tema en la planilla del curso.
 
@@ -50,3 +50,26 @@ Qué sigue:
 - Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos).
 
 Captura del tablero: kanban/dia-2.png
+
+## Día 3 - 11/11/2026
+Qué hicimos:
+- Definimos el diseño del sistema: diagrama de clases con los paquetes modelo, gestion y ui, qué clases participan en cada opción del menú y cómo se reparte el código.
+- Armamos el modelo de datos: atributos de cada clase, estructura elegida para cada dato (Set, PriorityQueue y pilas con ArrayDeque) y criterio de comparación.
+- Dibujamos los diagramas de flujo del menú principal, de reservar turno, de atender siguiente y de deshacer.
+- Hicimos los bocetos de lo que se ve y se escribe en la consola en las opciones de turnos (reservar, cancelar, atender siguiente, ver agenda y deshacer), con sus mensajes de error.
+- Aclaramos en el README que Paul dejó la materia y corregimos la bitácora del día 2.
+
+Quién hizo qué:
+- Fabrizio Gaitán: diagrama de clases, modelo de datos y diagramas de flujo (docs/diseño-de-clases.md, docs/diseño-de-datos.md y docs/diseño-flujo.md) y corrección del nombre de la captura dia-2.png.
+- Martina Noel Fernandez: bocetos del menú de consola para las opciones de turnos (docs/diseño-bocetos-menu.md), aclaración en el README sobre Paul y corrección de la bitácora del día 2.
+
+Qué nos trabó:
+- El trabajo del día quedó repartido entre tres integrantes, porque Paul dejó la materia.
+- El esqueleto del proyecto en /src todavía no está creado, continúa en curso. 
+
+Qué sigue:
+- Crear el esqueleto del proyecto en /src con los paquetes modelo, gestion y ui.
+- Día 4 (desarrollo I): programar las clases según el reparto de docs/diseño-de-clases.md, ajustándolo a los integrantes que seguimos trabajando.
+- Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos). 
+
+Captura del tablero: kanban/dia-3.png
