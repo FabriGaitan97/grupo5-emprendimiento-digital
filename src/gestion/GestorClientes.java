@@ -17,16 +17,16 @@ public class GestorClientes {
     public boolean registrar(Cliente c) {
         if(c==null || estaVacio(c.getNombre()) || estaVacio(c.getApellido()) || !celularValido(c.getCelular())){
         return false;
-    }
+        }
         return clientes.add(c); // si hay un cliente con el mismo teléfono, el add devuelve false
-
+    }
     // Busca por celular. Devuelve null si no existe
     public Cliente buscar(String celular) {
         for(Cliente c:clientes){
-        if(c.getCelular().equals(celular)){
-           return c;
+            if(c.getCelular().equals(celular)){
+               return c;
+            }
         }
-    }
         return null;
     }
 
@@ -53,7 +53,7 @@ public class GestorClientes {
             return false;
         }
         int inicio=0;
-        if(celular.stratsWith("+")){
+        if(celular.startsWith("+")){
             inicio=1;
         }
         int cantidad=celular.length()-inicio;
