@@ -32,6 +32,7 @@ public class GestorClientes {
 
     // Clientes con el mismo nombre y apellido (da aviso de que puede estar duplicado)
     public List<Cliente> buscarPorNombre(String nombre, String apellido) {
+        List<Cliente> coincidencias=new ArrayList<>();
         for(Cliente c:clientes){
             if(c.getNombre().equalsIgnoreCase(nombre)&& c.getApellido().equalsIgnoreCase(apellido)){
                 coincidencias.add(c);
@@ -45,6 +46,7 @@ public class GestorClientes {
         return new ArrayList<>(clientes);
     }
     private boolean estaVacio(String texto){
+    //Ayuda de IA (Claude): trim() saca los espacios del principio y del final; isEmpty() pregunta si quedó vacío.
         return texto==null || texto.trim().isEmpty();
     }
     //Ayuda de IA (Claude): startsWith, charAt y Character.isDigit son métodos básicos de Java
