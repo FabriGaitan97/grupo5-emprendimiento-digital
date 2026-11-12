@@ -54,23 +54,26 @@ Captura del tablero: kanban/dia-2.png
 ## Día 3 - 11/11/2026
 Qué hicimos:
 - Definimos el diseño del sistema: diagrama de clases con los paquetes modelo, gestion y ui, qué clases participan en cada opción del menú y cómo se reparte el código.
-- Armamos el modelo de datos: atributos de cada clase, estructura elegida para cada dato (Set, PriorityQueue y pilas con ArrayDeque) y criterio de comparación.
+- Armamos el modelo de datos: atributos de cada clase, estructura elegida para cada dato (Set, PriorityQueue y pilas) y criterio de comparación.
 - Dibujamos los diagramas de flujo del menú principal, de reservar turno, de atender siguiente y de deshacer.
 - Hicimos los bocetos de lo que se ve y se escribe en la consola en las opciones de turnos (reservar, cancelar, atender siguiente, ver agenda y deshacer), con sus mensajes de error.
-- Creamos la estructura del proyecto en /src (paquetes modelo, gestion y ui) y el esqueleto de las 13 clases: atributos y métodos declarados, con la lógica pendiente para los días 4 y 5.
+- Creamos la estructura del proyecto en /src (paquetes modelo, gestion y ui) y el esqueleto de las 13 clases: cada integrante subió el de sus clases, con atributos y métodos declarados y la lógica pendiente para los días 4 y 5.
+- Completamos las tarjetas del Día 3 en Trello con descripción, responsable y condición de terminada.
 - Aclaramos en el README que Paul dejó la materia y corregimos la bitácora del día 2.
 
 Quién hizo qué:
 - Fabrizio Gaitán: diagrama de clases, modelo de datos y diagramas de flujo (docs/diseño-de-clases.md, docs/diseño-de-datos.md y docs/diseño-flujo.md), esqueleto de TipoOperacion, Operacion, Atencion, Historial y Barberia, y corrección del nombre de la captura dia-2.png.
-- Martina Noel Fernandez: bocetos del menú de consola para las opciones de turnos (docs/diseño-bocetos-menu.md), aclaración en el README sobre Paul y corrección de la bitácora del día 2.
+- Martina Noel Fernandez: bocetos del menú de consola para las opciones de turnos (docs/diseño-bocetos-menu.md); esqueleto de Cliente, Turno, GestorClientes y GestorReservas (src/modelo y src/gestion), ajustado a lo visto en la clase 8 (por ejemplo, la pila de cortes con Stack); completar las tarjetas del Día 3 en el tablero; aclaración en el README sobre Paul y corrección de la bitácora del día 2.
 - Kaiken Luciano Garcia Segovia: estructura del proyecto en /src (paquetes modelo, gestion y ui) y esqueleto de Servicio, Agenda, Main y Menu.
 
 Qué nos trabó:
-- El trabajo del día quedó repartido entre tres integrantes, porque Paul dejó la materia.
-
+- Tuvimos algunos inconvenientes con el lenguaje (Java) y para ponernos de acuerdo en cómo subir los archivos al repositorio. Lo tenemos en cuenta para los próximos días: vamos a acordar de antemano quién sube cada archivo para no pisarnos.
+- Nuestros horarios son distintos, lo que dificulta trabajar en sincronización. Lo vamos coordinando por el grupo del equipo y lo tenemos presente para organizar el trabajo del Día 4.
+- El trabajo quedó repartido entre tres integrantes, porque Paul dejó la materia, por lo que tocó reorganizarnos y repartir temas a desarrollar. 
 
 Qué sigue:
-- Día 4 (desarrollo I): completar primero Cliente y Turno (equals, hashCode y compareTo), porque las usan todas las demás clases; después, la lógica de los gestores, Historial y el menú según el reparto de docs/diseño-de-clases.md.
+- Día 4 (desarrollo I): seguir trabajando el código en sincronización. Completar primero Cliente y Turno (equals, hashCode y compareTo), porque las usan todas las demás clases; después, la lógica de los gestores, Historial y el menú según el reparto de docs/diseño-de-clases.md.
+- Acordar entre los tres cómo y cuándo subimos los archivos, para que el repositorio quede ordenado.
 - Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos). 
 
 Captura del tablero: kanban/dia-3.png
