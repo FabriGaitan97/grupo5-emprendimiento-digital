@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Turno implements Comparable<Turno> {
 
@@ -29,24 +30,30 @@ public class Turno implements Comparable<Turno> {
     // Ordena los turnos por día y hora (el más temprano primero), para la PriorityQueue
     @Override
     public int compareTo(Turno otro) {
-        return 0;
+        return fechaHora.compareTo(otro.fechaHora);
     }
 
     // Dos turnos son iguales si tienen el mismo día y hora.
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if (this==obj) return true;
+        if (obj==null || getClass()!=obj.getClass()) return false;
+        Turno turno=(Turno) obj;
+        return fechaHora.equals(turno.fechaHora);
     }
 
     // Se calcula con la fecha y hora, igual que equals
     @Override
     public int hashCode() {
-        return 0;
+        return fechaHora.hashCode();
     }
 
     // Ejemplo: Mar 17/11 10:30 - Juan Pérez - Corte
     @Override
     public String toString() {
-        return "";
+        String[]dias={"Lun", "Mar", "Miér", "Jue", "Vie", "Sáb", "Dom"};
+        String dia=dias[fechaHora.getDayOfWeek().getValue()-1];
+        String fecha=fechaHora.format(DateTimeFormatter.ofPattern("dd/MM HH:mm"));
+        return dia+" "+fecha+" - "+cliente.getNombre()+" "+cliente.getApellido()+" - "+servicio.getNombre();
     }
 }
