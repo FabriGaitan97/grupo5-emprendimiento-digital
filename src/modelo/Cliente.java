@@ -37,14 +37,14 @@ public class Cliente {
         if(cortes.empty()){
         return null;
     }
-        return.cortes.peek();
+        return cortes.peek();
     }
 
     // Dos clientes son iguales si tienen el mismo celular. Usamos @Override en equals y hashCode para que dos clientes con el mismo celular sean considerados iguales, y así el HashSet no permita registrarlos dos veces
     @Override
     public boolean equals(Object obj) {
         if(this==obj) return true;
-        if(obj==null || getClass()!=obj.getClass() return false;
+        if(obj==null || getClass()!=obj.getClass()) return false;
         Cliente cliente=(Cliente) obj;
         return celular.equals(cliente.celular);
     }
@@ -58,6 +58,6 @@ public class Cliente {
     // Ejemplo: Juan Pérez (3515551234)
     @Override
     public String toString() {
-        return nombre+" "+apellido+" ("+celular+" )";
+        return nombre+" "+apellido+" ("+celular+")";
     }
 }
