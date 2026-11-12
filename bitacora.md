@@ -77,3 +77,29 @@ Qué sigue:
 - Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos). 
 
 Captura del tablero: kanban/dia-3.png
+
+## Día 4 - 12/11/2026
+Qué hicimos (parte de Martina; Fabrizio y Kaiken completan la suya debajo):
+- Programamos la lógica del módulo 2 (gestión de turnos) que habíamos dejado como esqueleto el Día 3: Turno, GestorReservas, Cliente y GestorClientes.
+- Turno: atributos, constructor, orden por fecha y hora (compareTo) para la PriorityQueue, y equals, hashCode y toString. Dos turnos se consideran el mismo si tienen el mismo día y hora.
+- GestorReservas: reservar y liberar turnos con un Set<Turno> (no permite dos turnos en el mismo horario) y validación del horario: no se atiende lunes ni domingo, de 10:00 a 19:30, solo en horas en punto o y media. Para eso declaramos constantes (LUNES = 1, DOMINGO = 7, HORA_APERTURA y HORA_CIERRE) en lugar de dejar comentarios.
+- Cliente: pila de cortes con Stack (registrarCorte, ultimoCorte), tal como se vio en la clase 8, y equals, hashCode y toString. Dos clientes son el mismo si tienen el mismo celular.
+- GestorClientes: registrar con validaciones (nombre y apellido no vacíos, celular de 8 a 15 dígitos con "+" opcional, celular no repetido gracias al Set), buscar por celular, buscar por nombre y apellido (para avisar si puede haber un cliente duplicado) y listar.
+- Probamos el código compilando todo el proyecto y con una serie de pruebas de comportamiento (24 verificaciones: celulares inválidos, horarios fuera de rango, turnos duplicados, orden de la PriorityQueue). Pasan todas.
+- Subimos cada clase al repositorio con un mensaje de commit descriptivo.
+
+Quién hizo qué:
+- Martina Noel Fernandez: programó y subió Turno, GestorReservas, Cliente y GestorClientes (src/modelo y src/gestion), con 8 commits en el repositorio. Usó Claude (IA) como apoyo para escribir y revisar el código; lo que no estaba en la clase 8 quedó marcado en los comentarios con "Ayuda de IA (Claude)".
+- Fabrizio Gaitán: (completar)
+- Kaiken Luciano Garcia Segovia: (completar)
+
+Qué nos trabó (Martina):
+- Hubo mucha búsqueda de términos y métodos de Java que hacían falta para que el código fuera más simple y correcto: manejo de fecha y hora (LocalDateTime, getDayOfWeek, getHour, getMinute), Comparable y compareTo, hashCode, y métodos de texto (startsWith, charAt, Character.isDigit, trim, isEmpty, equalsIgnoreCase). Para no apartarnos de la clase usamos Stack y las estructuras vistas, y marcamos con comentarios lo que surgió de la IA como herramienta de apoyo.
+- Hubo prueba y error al compilar. Corregimos: declaraciones, errores de tipeo y sintaxis (un punto de más en un return, un paréntesis faltante en equals, "stratsWith" en vez de "startsWith"), llaves mal cerradas en registrar y buscar, y una línea que se perdió en buscarPorNombre (la lista de coincidencias). Cada corrección quedó como commit propio.
+- Seguimos con inconvenientes para acordar el uso de GitHub y con horarios distintos entre los integrantes, así que cada uno sube solo sus archivos para no pisarnos.
+
+Qué sigue (Martina):
+- Día 5: conectar los gestores con Barberia y la Agenda, cuando estén listas, y ayudar con las pruebas.
+- Agregar al README la sección de uso de herramientas de IA, de acuerdo con el grupo.
+
+Captura del tablero: kanban/dia-4.png
