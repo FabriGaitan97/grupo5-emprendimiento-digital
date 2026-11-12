@@ -19,12 +19,10 @@ public enum Servicio {
     }
 
     public String getNombre() {
-        // TODO: devolver el nombre
-        return null;
+        return nombre;
     }
 
     public double getPrecio() {
-        // TODO: devolver el precio
-        return 0;
+        return precio;
     }
 }
