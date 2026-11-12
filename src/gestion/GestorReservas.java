@@ -20,7 +20,7 @@ public class GestorReservas {
 
     // Martes a sábado, entre las 10:00 y las 19:30, y minutos 00 o 30
     public boolean esHorarioValido(LocalDateTime fechaHora) {
-        DayOfWeek dia=fechaHora.getDayOfWeek();
+        int dia=fechaHora.getDayOfWeek().getValue();
         if(dia==LUNES || dia==DOMINGO){
            return false;
     }
