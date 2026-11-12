@@ -29,28 +29,35 @@ public class Cliente {
     }
   
     public void registrarCorte(Atencion a) {
+        cortes.push(a);
     }
 
     // Devuelve el último corte o null, si todavía no tiene cortes
     public Atencion ultimoCorte() {
+        if(cortes.empty()){
         return null;
+    }
+        return.cortes.peek();
     }
 
     // Dos clientes son iguales si tienen el mismo celular. Usamos @Override en equals y hashCode para que dos clientes con el mismo celular sean considerados iguales, y así el HashSet no permita registrarlos dos veces
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if(this==obj) return true;
+        if(obj==null || getClass()!=obj.getClass() return false;
+        Cliente cliente=(Cliente) obj;
+        return celular.equals(cliente.celular);
     }
 
     // Se calcula con el celular, igual que equals
     @Override
     public int hashCode() {  
-        return 0;
+        return celular.hashCode();
     }
 
     // Ejemplo: Juan Pérez (3515551234)
     @Override
     public String toString() {
-        return "";
+        return nombre+" "+apellido+" ("+celular+" )";
     }
 }
