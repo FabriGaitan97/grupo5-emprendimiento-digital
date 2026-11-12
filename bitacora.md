@@ -57,19 +57,20 @@ Qué hicimos:
 - Armamos el modelo de datos: atributos de cada clase, estructura elegida para cada dato (Set, PriorityQueue y pilas con ArrayDeque) y criterio de comparación.
 - Dibujamos los diagramas de flujo del menú principal, de reservar turno, de atender siguiente y de deshacer.
 - Hicimos los bocetos de lo que se ve y se escribe en la consola en las opciones de turnos (reservar, cancelar, atender siguiente, ver agenda y deshacer), con sus mensajes de error.
+- Creamos la estructura del proyecto en /src (paquetes modelo, gestion y ui) y el esqueleto de las 13 clases: atributos y métodos declarados, con la lógica pendiente para los días 4 y 5.
 - Aclaramos en el README que Paul dejó la materia y corregimos la bitácora del día 2.
 
 Quién hizo qué:
-- Fabrizio Gaitán: diagrama de clases, modelo de datos y diagramas de flujo (docs/diseño-de-clases.md, docs/diseño-de-datos.md y docs/diseño-flujo.md) y corrección del nombre de la captura dia-2.png.
+- Fabrizio Gaitán: diagrama de clases, modelo de datos y diagramas de flujo (docs/diseño-de-clases.md, docs/diseño-de-datos.md y docs/diseño-flujo.md), esqueleto de TipoOperacion, Operacion, Atencion, Historial y Barberia, y corrección del nombre de la captura dia-2.png.
 - Martina Noel Fernandez: bocetos del menú de consola para las opciones de turnos (docs/diseño-bocetos-menu.md), aclaración en el README sobre Paul y corrección de la bitácora del día 2.
+- Kaiken Luciano Garcia Segovia: estructura del proyecto en /src (paquetes modelo, gestion y ui) y esqueleto de Servicio, Agenda, Main y Menu.
 
 Qué nos trabó:
 - El trabajo del día quedó repartido entre tres integrantes, porque Paul dejó la materia.
-- El esqueleto del proyecto en /src todavía no está creado, continúa en curso. 
+
 
 Qué sigue:
-- Crear el esqueleto del proyecto en /src con los paquetes modelo, gestion y ui.
-- Día 4 (desarrollo I): programar las clases según el reparto de docs/diseño-de-clases.md, ajustándolo a los integrantes que seguimos trabajando.
+- Día 4 (desarrollo I): completar primero Cliente y Turno (equals, hashCode y compareTo), porque las usan todas las demás clases; después, la lógica de los gestores, Historial y el menú según el reparto de docs/diseño-de-clases.md.
 - Ajustar el análisis del módulo 3 al alcance del MVP (servicios fijos). 
 
 Captura del tablero: kanban/dia-3.png
