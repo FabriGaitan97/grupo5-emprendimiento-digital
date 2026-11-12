@@ -32,7 +32,7 @@ public class Turno implements Comparable<Turno> {
         return 0;
     }
 
-    // Dos turnos son iguales si tienen el mismo día y hora. No se deben gestionar de esa forma, por lo que devuelve false.
+    // Dos turnos son iguales si tienen el mismo día y hora.
     @Override
     public boolean equals(Object obj) {
         return false;
