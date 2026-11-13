@@ -96,12 +96,18 @@ Fabrizio
 - Simulamos pruebas de Barberia con las clases del grupo: registrar, reservar, horario ocupado, cancelar, atender, "lo de siempre", reporte y deshacer.
 - Actualizamos la documentación de diseño y el análisis del módulo 4 para reflejar el cambio a Stack.
 Kaiken
-(COMPLETAR)
+- Servicio: implementamos los getters getNombre() y getPrecio() del enum Servicio, necesarios para consultar los nombres y precios de los servicios desde otras clases.
+- Agenda: implementamos la gestión de turnos mediante PriorityQueue, incluyendo agregar, quitar, buscar, consultar el próximo turno y listar los turnos ordenados cronológicamente.
+- Main: implementamos el punto de entrada del programa, creando la instancia de Barberia, inicializando el menú y ejecutando el sistema.
+- Menu: desarrollamos el menú principal de consola con las opciones 1 a 8 y la opción 0 para salir.
+- Conectamos las opciones del menú con los métodos de Barberia: registrar clientes, reservar y cancelar turnos, atender al siguiente cliente, consultar la agenda, consultar clientes y «lo de siempre», mostrar el historial y reporte, y deshacer operaciones.
+- Agregamos métodos de lectura y validación de datos para textos, números, celulares y fechas, evitando que el programa se interrumpa ante entradas incorrectas.
+
 
 Quién hizo qué:
 - Martina Noel Fernandez: programó y subió Turno, GestorReservas, Cliente y GestorClientes (src/modelo y src/gestion), con 8 commits en el repositorio. Usó Claude (IA) como apoyo para escribir y revisar el código; lo que no estaba en la clase 8 quedó marcado en los comentarios con "Ayuda de IA (Claude)".
 - Fabrizio Gaitán: programó y subió Historial, Barberia y el toString de Atencion (src/gestion y src/modelo), con 3 commits en el repositorio. Usó Claude para probar el código con una prueba que simula el uso del sistema, porque el menú todavía no estaba terminado.
-- Kaiken Luciano Garcia Segovia: (completar)
+- Kaiken Luciano Garcia Segovia: programó y subió Main y Menu (src/ui), implementando el menú principal de consola, las opciones 1 a 8 y las validaciones de entrada. Usó ChatGPT (IA) como apoyo para escribir y revisar el código.
 
 Qué nos trabó:
 - Seguimos con inconvenientes para acordar el uso de GitHub y con horarios distintos entre los integrantes, así que cada uno sube solo sus archivos para no pisarnos.
@@ -113,8 +119,10 @@ Fabrizio
 - Como el menú todavía no está programado, no pudimos probar el sistema completo desde la consola; probamos Barberia con una prueba aparte que simula el uso.
 - Unificamos las dos pilas del proyecto con Stack (como en la Clase 8), porque el esqueleto de Historial usaba ArrayDeque.
 Kaiken
-(COMPLETAR)
-
+- Surgieron ajustes al trabajar con las fechas y horas, LocalDateTime y DateTimeFormatter, y al validar las entradas del usuario. Incorporamos controles para evitar datos vacíos, números de celular inválidos, opciones incorrectas y formatos de fecha erróneos.
+- Al integrar el menú con las clases de marti y fabri, revisamos los nombres de métodos, los getters y los tipos de datos. Así, las llamadas coincidieron con las implementaciones existentes.
+-Como no podíamos entregar un sistema completo sin integrar primero todos los módulos, realizamos pruebas de compilación del proyecto y corregimos las incompatibilidades encontradas.
+ 
 Qué sigue:
 - Día 5: conectar las opciones del menú con Barberia, que ya está completa junto con Agenda, y hacer las pruebas de punta a punta con el programa funcionando.
 - Agregar al README la sección de uso de herramientas de IA, de acuerdo con el grupo.
