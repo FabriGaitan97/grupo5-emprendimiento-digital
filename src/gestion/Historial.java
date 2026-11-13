@@ -3,6 +3,8 @@ package gestion;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.Collections;
+
 
 import modelo.Atencion;
 import modelo.Operacion;
@@ -23,15 +25,16 @@ public class Historial {
 
     /** Agrega una atención al historial. */
     public void registrarAtencion(Atencion a) {
-        // TODO (Día 4): agregar a la lista
+        atenciones.add(a);
     }
-
+    
     /** Devuelve las atenciones de la más reciente a la más antigua. */
     public List<Atencion> listarAtenciones() {
-        // TODO (Día 4): copiar la lista e invertir el orden
-        return new ArrayList<>();
+        List<Atencion> copia = new ArrayList<>(atenciones);
+        Collections.reverse(copia);
+        return copia;
     }
-
+    
     /** Guarda una operación en la pila (push). */
     public void apilar(Operacion op) {
         operaciones.push(op);

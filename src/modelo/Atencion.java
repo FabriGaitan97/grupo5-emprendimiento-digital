@@ -40,7 +40,7 @@ public class Atencion {
 
     @Override
     public String toString() {
-        // TODO (Día 4): formato "Mar 11/11 10:00 – Juan Pérez – Corte – degradé bajo – $8000"
-        return turno + " – " + descripcionCorte + " – $" + precioCobrado;
+        // Ejemplo: Mar 11/11 10:00 - Juan Pérez - Corte - degradé bajo - $8000
+        return turno + " - " + descripcionCorte + " - $" + (int) precioCobrado;
     }
 }
