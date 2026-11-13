@@ -1,9 +1,8 @@
 package gestion;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
+import java.util.Stack;
 
 import modelo.Atencion;
 import modelo.Operacion;
@@ -17,10 +16,10 @@ public class Historial {
 
     // Todas las atenciones en orden de registro (estructura de apoyo, no es del tema).
     private final List<Atencion> atenciones = new ArrayList<>();
-
+    
     // Pila de operaciones: la última operación queda arriba (LIFO).
-    // Se usa ArrayDeque en lugar de la clase Stack, como recomienda la documentación de Java.
-    private final Deque<Operacion> operaciones = new ArrayDeque<>();
+    // Se usa la clase Stack de Java, como en la Clase 8 (Sets, Queues y Stacks).
+    private final Stack<Operacion> operaciones = new Stack<>();
 
     /** Agrega una atención al historial. */
     public void registrarAtencion(Atencion a) {
@@ -35,19 +34,20 @@ public class Historial {
 
     /** Guarda una operación en la pila (push). */
     public void apilar(Operacion op) {
-        // TODO (Día 4): operaciones.push(op)
+        operaciones.push(op);
     }
 
     /** Saca la última operación de la pila (pop). Devuelve null si está vacía. */
     public Operacion desapilar() {
-        // TODO (Día 4): si está vacía devolver null; si no, operaciones.pop()
-        return null;
+        if (operaciones.isEmpty()) {
+            return null;
+        }
+        return operaciones.pop();
     }
-
+    
     /** Indica si hay operaciones para deshacer. */
     public boolean hayOperaciones() {
-        // TODO (Día 4): !operaciones.isEmpty()
-        return false;
+    	return !operaciones.isEmpty();
     }
 
     /** Cantidad de atenciones realizadas (para el reporte). */
