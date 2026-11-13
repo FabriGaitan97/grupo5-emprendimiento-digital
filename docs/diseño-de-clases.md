@@ -146,7 +146,7 @@ Representa a un cliente de la barbería. Su celular lo identifica.
 | `celular` | `String` | Identificador único; no se modifica |
 | `nombre` | `String` | Nombre |
 | `apellido` | `String` | Apellido |
-| `cortes` | `Deque<Atencion>` | Pila de cortes del cliente (`ArrayDeque`) |
+| `cortes` | `Stack<Atencion>` | Pila de cortes del cliente |
 
 | Método | Devuelve | Qué hace |
 | --- | --- | --- |
@@ -276,7 +276,7 @@ Atenciones realizadas y operaciones para deshacer.
 | Atributo | Tipo | Descripción |
 | --- | --- | --- |
 | `atenciones` | `List<Atencion>` | `ArrayList`; todas las atenciones |
-| `operaciones` | `Deque<Operacion>` | `ArrayDeque` usada como pila |
+| `operaciones` | `Stack<Operacion>` | Pila de operaciones para deshacer |
 
 | Método | Devuelve | Qué hace |
 | --- | --- | --- |
@@ -380,7 +380,7 @@ classDiagram
         }
         class Historial {
             -List~Atencion~ atenciones
-            -Deque~Operacion~ operaciones
+            -Stack~Operacion~ operaciones
             +registrarAtencion(Atencion a)
             +listarAtenciones() List~Atencion~
             +apilar(Operacion op)
@@ -397,7 +397,7 @@ classDiagram
             -String celular
             -String nombre
             -String apellido
-            -Deque~Atencion~ cortes
+            -Stack~Atencion~ cortes
             +registrarCorte(Atencion a)
             +ultimoCorte() Atencion
             +equals(Object o) boolean
