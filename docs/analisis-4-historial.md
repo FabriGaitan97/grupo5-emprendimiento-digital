@@ -61,7 +61,7 @@ Criterio de aceptación: el turno vuelve a la agenda en su mismo día y hora.
 ### Pila de operaciones (Stack) – deshacer
 Deshacer siempre revierte la **última** operación realizada: la última que entra es la primera que sale (LIFO). Ese es justamente el comportamiento de una pila: `push()` guarda cada operación y `pop()` saca la última al deshacer.
 Una List permitiría acceder o borrar cualquier posición, cosa que el negocio no necesita y que podría generar errores (por ejemplo, deshacer una operación vieja en lugar de la última).
-Se implementa con `Deque<Operacion>` y `ArrayDeque`, que es lo que recomienda la documentación de Java en lugar de la clase `Stack`.
+Se implementa con la clase `Stack<Operacion>` de Java, la estructura de pila vista en la Clase 8.
 
 ### Pila de cortes por cliente (Stack) – "lo de siempre"
 Cada cliente guarda sus cortes en una pila: al atenderlo se hace `push()` del corte, y "lo de siempre" es `peek()`, el último corte, sin perder los anteriores.
