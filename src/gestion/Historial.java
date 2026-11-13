@@ -55,19 +55,34 @@ public class Historial {
 
     /** Cantidad de atenciones realizadas (para el reporte). */
     public int cantidadAtenciones() {
-        // TODO (Día 5)
-        return 0;
+        return atenciones.size();
     }
 
     /** Suma de lo cobrado en todas las atenciones (para el reporte). */
     public double totalFacturado() {
-        // TODO (Día 5): sumar getPrecioCobrado() de cada atención
-        return 0;
+        double total = 0;
+        for (Atencion a : atenciones) {
+            total += a.getPrecioCobrado();
+        }
+        return total;
     }
 
     /** Servicio que más veces se atendió. Devuelve null si no hay atenciones. */
     public Servicio servicioMasPedido() {
-        // TODO (Día 5): contar cuántas veces aparece cada servicio y devolver el mayor
-        return null;
+        Servicio masPedido = null;
+        int maximo = 0;
+        for (Servicio s : Servicio.values()) {
+            int cantidad = 0;
+            for (Atencion a : atenciones) {
+                if (a.getTurno().getServicio() == s) {
+                    cantidad++;
+                }
+            }
+            if (cantidad > maximo) {
+                maximo = cantidad;
+                masPedido = s;
+            }
+        }
+        return masPedido;
     }
 }
