@@ -10,7 +10,7 @@ Qué datos guarda cada clase, en qué estructura se guardan y con qué criterio 
 | `celular` | `String` | Identificador del cliente | Obligatorio, único, no se modifica. Se guarda sin espacios ni guiones; 8 a 15 dígitos, con "+" opcional al inicio |
 | `nombre` | `String` | Nombre | Obligatorio, no vacío |
 | `apellido` | `String` | Apellido | Obligatorio, no vacío |
-| `cortes` | `Deque<Atencion>` | Pila con las atenciones del cliente | Empieza vacía; el último corte queda arriba |
+| `cortes` | `Stack<Atencion>` | Pila con las atenciones del cliente | Empieza vacía; el último corte queda arriba |
 
 - **Igualdad:** `equals()` y `hashCode()` por `celular`.
 
@@ -56,8 +56,8 @@ Qué datos guarda cada clase, en qué estructura se guardan y con qué criterio 
 | `GestorClientes` | `clientes` | `Set<Cliente>` | `HashSet` | Clientes registrados | Igualdad por celular | `add`, `contains`, recorrer para buscar |
 | `GestorReservas` | `reservados` | `Set<Turno>` | `HashSet` | Horarios tomados | Igualdad por día y hora | `add` (devuelve `false` si está ocupado), `remove` |
 | `Agenda` | `turnos` | `Queue<Turno>` | `PriorityQueue` | Turnos pendientes | Orden por día y hora (`compareTo`) | `add`, `peek`, `poll`, `remove` |
-| `Historial` | `operaciones` | `Deque<Operacion>` (pila) | `ArrayDeque` | Reservas y cancelaciones | LIFO | `push`, `pop`, `isEmpty` |
-| `Cliente` | `cortes` | `Deque<Atencion>` (pila) | `ArrayDeque` | Cortes del cliente | LIFO | `push`, `peek` |
+| `Historial` | `operaciones` | `Stack<Operacion>` (pila) | `Stack` | Reservas y cancelaciones | LIFO | `push`, `pop`, `isEmpty` |
+| `Cliente` | `cortes` | `Stack<Atencion>` (pila) | `Stack` | Cortes del cliente | LIFO | `push`, `peek` |
 | `Historial` | `atenciones` | `List<Atencion>` | `ArrayList` | Todas las atenciones | Orden de registro | `add`, recorrer (apoyo, no es del tema) |
 
 ## 3. Detalles de implementación a tener en cuenta
@@ -66,7 +66,7 @@ Qué datos guarda cada clase, en qué estructura se guardan y con qué criterio 
 - **El celular y la fecha del turno no se modifican** mientras el objeto está en un `Set`: si cambiaran, cambiaría su `hashCode()` y el `Set` dejaría de encontrarlo.
 - **La `PriorityQueue` no se recorre en orden.** `peek()` y `poll()` siempre dan el turno más próximo, pero un `for` sobre la cola no sale ordenado. Para "Ver agenda", `listarOrdenado()` copia los turnos a una lista y la ordena.
 - **`Agenda.quitar()` usa `remove(Object)`,** que busca por `equals()`: alcanza con un turno con la misma fecha y hora.
-- **Pilas con `ArrayDeque`** en lugar de la clase `Stack`, como recomienda la documentación de Java.
+- **Pilas con la clase `Stack`** de Java, como se vio en la Clase 8: `push()` apila, `pop()` saca el último y `peek()` lo consulta sin sacarlo.
 - **Deshacer una cancelación** vuelve a llamar a `reservas.reservar(turno)`: si devuelve `false` (otro turno ocupó ese horario), se informa que no se puede deshacer.
 
 ## 4. Ejemplo de datos en memoria
