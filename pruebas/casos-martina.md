@@ -1,7 +1,9 @@
 # Casos de prueba: clientes, reservas, cancelar y agenda
 
 Responsable: Martina Noel Fernandez
+
 Fecha de las pruebas: 14/11/2026
+
 Opciones del menú que se prueban: 1 (registrar cliente), 2 (reservar turno), 3 (cancelar turno) y 5 (ver agenda). Se prueban también las clases de mi módulo: Cliente, Turno, GestorClientes y GestorReservas.
 
 Cómo se hicieron: se corrió el programa completo (`ui.Main`) y se cargaron los datos por consola, uno por uno, con un guion de entradas para repetir cada caso siempre igual. Armé los casos con ayuda de Claude (IA) para automatizar la carga.
