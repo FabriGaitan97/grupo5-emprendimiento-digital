@@ -137,15 +137,40 @@ Qué hicimos:
 - Anotamos observaciones de uso al recorrer todas las opciones del menú.
 
 Quién hizo qué:
-- Martina Noel Fernandez: (completar)
+- Martina Noel Fernandez: el 13/11 no pude estar con el Emprendimiento Digital por compromisos laborales, y retomé el 14/11. Cerré la tarjeta de validación de horario (GestorReservas.esHorarioValido, programada el Día 4). Revisé cómo Barberia y Menu usan las clases bajo mi responsabilidad (Cliente, Turno, GestorClientes y GestorReservas) y recorrí desde la consola las opciones 1, 2, 3 y 5. Cancelar turno y consultar cliente ("lo de siempre") los implementaron Fabrizio en Barberia y Kaiken en Menu; yo los verifiqué con casos de prueba.
 - Fabrizio Gaitán: escribió y subió los casos de prueba de las opciones 4, 6, 7 y 8 (pruebas/casos-fabrizio.md), 13 casos y todos pasaron. Recorrió el menú completo como si fuera el barbero y anotó observaciones de uso para el grupo.
 - Kaiken Luciano Garcia Segovia: corrió y subió Menu.java con las mejoras de la revisión de Fabrizio. Volver al menú con 0 en cada dato, cancelar turno eligiendo por número, no permitir reservar fechas pasadas y el texto "Último corte (lo de siempre)".
 
 Qué nos trabó:
 Fabrizio
 - Al usar el programa encontramos cosas para mejorar: se pueden reservar turnos en fechas pasadas (y "atender siguiente" los toma primero), si uno se equivoca no puede volver al menú sin terminar la carga, y para cancelar hay que escribir la fecha y la hora exactas.
+Martina
+- Por trabajo no pude avanzar el 13/11, así que mis tareas del Día 5 las hice junto con las del Día 6 el 14/11.
 
 Qué sigue:
 - Completar
 
-Captura del tablero: kanban/dia-5.png(Completar)
+Captura del tablero: kanban/dia-5.png
+
+## Día 6 - 14/11/2026
+Qué hicimos:
+- Escribimos y corrimos 26 casos de prueba de las opciones 1 (registrar cliente), 2 (reservar turno), 3 (cancelar turno) y 5 (ver agenda): 8 normales y 18 de error (celulares inválidos, nombres vacíos, horarios ocupados, lunes y domingos, fuera de horario, fechas inexistentes o pasadas, cancelar sin turnos). Pasaron los 26 (pruebas/casos-martina.md).
+- Armamos las entradas de bitácora y las tarjetas del Día 5 que habían quedado pendientes.
+Fabrizio
+- (completar)
+Kaiken
+- (completar)
+
+Quién hizo qué:
+- Martina Noel Fernandez: casos de prueba de clientes y turnos, y registro del trabajo del Día 5 y 6. Usé Claude (IA) como apoyo para automatizar la carga de los casos y de apoyo para redactar los resultados.
+- Fabrizio Gaitán: (completar)
+- Kaiken Luciano Garcia Segovia: (completar)
+
+Qué nos trabó:
+Martina
+- Al probar encontramos cosas para mejorar que no hacen fallar ningún caso: buscarPorNombre existe pero el menú no lo usa (no avisa si hay un cliente con el mismo nombre), el menú rechaza celulares con "+" aunque GestorClientes los acepta, y el mensaje de horario ocupado es el mismo que el de horario inválido. Quedaron anotadas en las pruebas para decidir si las corregimos.
+
+Qué sigue:
+- Día 7: comentarios en el código y fuentes citadas (marcar lo que se hizo con ayuda de IA), README completo con capturas, y preparar la defensa.
+
+Captura del tablero: kanban/dia-6.png
