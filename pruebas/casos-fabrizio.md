@@ -17,9 +17,9 @@ Cada prueba arranca con el programa recién abierto, salvo que diga otra cosa en
 | 1 | Atender con la agenda vacía | Opción 4 sin turnos cargados | Avisa que no hay turnos y vuelve al menú | "No hay turnos." | Sí |
 | 2 | Deshacer sin operaciones | Opción 8 sin haber reservado ni cancelado nada | Avisa que no hay nada para deshacer | "No hay operaciones para deshacer." | Sí |
 | 3 | Reporte sin atenciones | Opción 7 sin atenciones | Muestra todo en cero y no se corta | "Todavía no hay atenciones registradas." Reporte: 0 atenciones, $0, servicio más pedido "-" | Sí |
-| 4 | "Lo de siempre" de un cliente que nunca se atendió | Opción 6, celular 3515551234 (Juan recién registrado) | Muestra que no tiene cortes | "Lo de siempre: Sin cortes registrados" | Sí |
+| 4 | "Lo de siempre" de un cliente que nunca se atendió | Opción 6, celular 3515551234 (Juan recién registrado) | Muestra que no tiene cortes | "Último corte (lo de siempre): Sin cortes registrados" | Sí |
 | 5 | Atender respeta el orden por día y hora | Reservo primero Ana 17/11 10:30 barba y después Juan 17/11 10:00 corte. Opción 4 | Atiende primero a Juan (10:00) aunque se reservó después | Próximo turno: "Mar 17/11 10:00 - Juan Pérez - Corte". Atención registrada, $8000 | Sí |
-| 6 | "Lo de siempre" después de atender | Sigue de la prueba 5. Descripción del corte: "degradé bajo". Opción 6 con 3515551234 | Muestra el último corte de Juan | "Lo de siempre: degradé bajo" | Sí |
+| 6 | "Lo de siempre" después de atender | Sigue de la prueba 5. Descripción del corte: "degradé bajo". Opción 6 con 3515551234 | Muestra el último corte de Juan | "Último corte (lo de siempre): degradé bajo" | Sí |
 | 7 | Historial de la más reciente a la más antigua | Sigue de la prueba 6. Atiendo a Ana con "barba prolija". Opción 7 | Primero Ana, después Juan | 1. Ana Díaz, Barba, barba prolija, $5000. 2. Juan Pérez, Corte, degradé bajo, $8000 | Sí |
 | 8 | Reporte con atenciones | Sigue de la prueba 7. Opción 7 | 2 atenciones, $13000, servicio más pedido Corte (empate, gana el primero del enum) | "Atenciones realizadas: 2 / Total facturado: $13000 / Servicio más pedido: Corte" | Sí |
 | 9 | Deshacer la reserva de un turno que ya se atendió | Sigue de la prueba 8. Opción 8 | No deja deshacer porque el turno ya no está en la agenda | "No se puede deshacer: el turno ya fue atendido." | Sí |
@@ -37,3 +37,5 @@ Estas no son fallas de la parte de atención e historial, pero salieron al recor
 3. Para cancelar hay que escribir la fecha y la hora exactas del turno. Sería más cómodo ver la agenda antes y elegir el turno por número.
 4. Cargar la fecha completa (dd/MM/yyyy HH:mm) en cada reserva es lento.
 5. El texto "lo de siempre" confunde un poco: muestra el último corte, y eso no siempre es lo que el cliente se hace habitualmente.
+
+Estado al cierre del 13/11: Kaiken corrigió las observaciones 1, 2, 3 y 5 en Menu.java (no deja reservar fechas pasadas, se vuelve al menú con 0, para cancelar se muestran los turnos y se elige por número, y la etiqueta ahora dice "Último corte (lo de siempre)"). La 4 sigue igual: la fecha se escribe completa, aunque ahora el menú muestra un ejemplo y los turnos ya reservados. Volví a probar las opciones 4, 6, 7 y 8 con esa versión y siguen funcionando.
