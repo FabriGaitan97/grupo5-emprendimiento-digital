@@ -139,7 +139,7 @@ Qué hicimos:
 Quién hizo qué:
 - Martina Noel Fernandez: (completar)
 - Fabrizio Gaitán: escribió y subió los casos de prueba de las opciones 4, 6, 7 y 8 (pruebas/casos-fabrizio.md), 13 casos y todos pasaron. Recorrió el menú completo como si fuera el barbero y anotó observaciones de uso para el grupo.
-- Kaiken Luciano Garcia Segovia: (completar)
+- Kaiken Luciano Garcia Segovia: corrió y subió Menu.java con las mejoras de la revisión de Fabrizio. Volver al menú con 0 en cada dato, cancelar turno eligiendo por número, no permitir reservar fechas pasadas y el texto "Último corte (lo de siempre)".
 
 Qué nos trabó:
 Fabrizio
