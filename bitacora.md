@@ -167,8 +167,8 @@ Quién hizo qué:
 - Kaiken Luciano Garcia Segovia: (completar)
 
 Qué nos trabó:
-Martina
-- Al probar encontramos cosas para mejorar que no hacen fallar ningún caso: buscarPorNombre existe pero el menú no lo usa (no avisa si hay un cliente con el mismo nombre), el menú rechaza celulares con "+" aunque GestorClientes los acepta, y el mensaje de horario ocupado es el mismo que el de horario inválido. Quedaron anotadas en las pruebas para decidir si las corregimos.
+
+Martina: - Al probar encontramos cosas para mejorar que no hacen fallar ningún caso: buscarPorNombre existe pero el menú no lo usa (no avisa si hay un cliente con el mismo nombre), el menú rechaza celulares con "+" aunque GestorClientes los acepta, y el mensaje de horario ocupado es el mismo que el de horario inválido. Quedaron anotadas en las pruebas para decidir si las corregimos.
 
 Qué sigue:
 - Día 7: comentarios en el código y fuentes citadas (marcar lo que se hizo con ayuda de IA), README completo con capturas, y preparar la defensa.
