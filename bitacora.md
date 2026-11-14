@@ -128,3 +128,24 @@ Qué sigue:
 - Agregar al README la sección de uso de herramientas de IA, de acuerdo con el grupo.
 
 Captura del tablero: kanban/dia-4.png
+
+## Día 5 (13/11/2026)
+
+Qué hicimos:
+- Con el menú ya conectado a Barberia, probamos el sistema completo desde la consola.
+- Escribimos los casos de prueba de atención, historial y deshacer en /pruebas.
+- Anotamos observaciones de uso al recorrer todas las opciones del menú.
+
+Quién hizo qué:
+- Martina Noel Fernandez: (completar)
+- Fabrizio Gaitán: escribió y subió los casos de prueba de las opciones 4, 6, 7 y 8 (pruebas/casos-fabrizio.md), 13 casos y todos pasaron. Recorrió el menú completo como si fuera el barbero y anotó observaciones de uso para el grupo.
+- Kaiken Luciano Garcia Segovia: (completar)
+
+Qué nos trabó:
+Fabrizio
+- Al usar el programa encontramos cosas para mejorar: se pueden reservar turnos en fechas pasadas (y "atender siguiente" los toma primero), si uno se equivoca no puede volver al menú sin terminar la carga, y para cancelar hay que escribir la fecha y la hora exactas.
+
+Qué sigue:
+- Completar
+
+Captura del tablero: kanban/dia-5.png(Completar)
