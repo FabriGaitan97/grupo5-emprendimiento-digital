@@ -1,4 +1,3 @@
-
 package ui;
 
 import java.time.LocalDateTime; // Ayudado por IA
@@ -18,6 +17,8 @@ public class Menu {
 
     private Barberia barberia;
     private Scanner scanner;
+
+    private static final String VOLVER = "0"; // texto que se escribe para volver al menú desde cualquier dato
 
     private static final DateTimeFormatter FORMATO_FECHA =
             DateTimeFormatter.ofPattern("dd/MM/uuuu HH:mm") // Ayudado por IA: creación de un formato personalizado.
@@ -95,15 +96,31 @@ public class Menu {
     private void registrarCliente() {
         System.out.println("- REGISTRAR CLIENTE -");
 
-        String celular = leerCelular("Celular: ");
+        String celular = leerCelular("Celular (0 para volver): ");
+
+        if (celular == null) {
+            volverAlMenu();
+            return;
+        }
 
         if (barberia.consultarCliente(celular) != null) {
             System.out.println("Ya existe un cliente registrado con ese celular.");
             return;
         }
 
-        String nombre = leerTexto("Nombre: ");
-        String apellido = leerTexto("Apellido: ");
+        String nombre = leerTexto("Nombre (0 para volver): ");
+
+        if (nombre == null) {
+            volverAlMenu();
+            return;
+        }
+
+        String apellido = leerTexto("Apellido (0 para volver): ");
+
+        if (apellido == null) {
+            volverAlMenu();
+            return;
+        }
 
         if (barberia.registrarCliente(nombre, apellido, celular)) {
             System.out.println("Cliente registrado: " + nombre + " " + apellido);
@@ -116,14 +133,31 @@ public class Menu {
     private void reservarTurno() {
         System.out.println("- RESERVAR TURNO -");
 
-        String celular = leerCelular("Celular del cliente: ");
+        String celular = leerCelular("Celular del cliente (0 para volver): ");
+
+        if (celular == null) {
+            volverAlMenu();
+            return;
+        }
+
         Cliente cliente = barberia.consultarCliente(celular);
 
         if (cliente == null) {
             System.out.println("El cliente no está registrado. Ingrese sus datos.");
 
-            String nombre = leerTexto("Nombre: ");
-            String apellido = leerTexto("Apellido: ");
+            String nombre = leerTexto("Nombre (0 para volver): ");
+
+            if (nombre == null) {
+                volverAlMenu();
+                return;
+            }
+
+            String apellido = leerTexto("Apellido (0 para volver): ");
+
+            if (apellido == null) {
+                volverAlMenu();
+                return;
+            }
 
             if (barberia.registrarCliente(nombre, apellido, celular)) {
                 System.out.println("Cliente registrado: " + nombre + " " + apellido);
@@ -145,22 +179,41 @@ public class Menu {
 
         Servicio servicio = elegirServicio();
 
+        if (servicio == null) {
+            volverAlMenu();
+            return;
+        }
+
+        // Se muestra el horario de atención y los turnos ya reservados antes de pedir la fecha
+        System.out.println();
+        System.out.println("Atendemos de martes a sábado, de 10:00 a 19:30, en franjas de 30 minutos.");
+        mostrarTurnosReservados();
+
         boolean reservado = false;
 
         while (!reservado) {
             LocalDateTime fechaHora = leerFechaHora(
-                    "Día y hora (dd/MM/yyyy HH:mm): ");
+                    "Día y hora (dd/MM/yyyy HH:mm, ej.: 17/11/2026 10:30, 0 para volver): ");
 
-            reservado = barberia.reservarTurno(
-                    celular, servicio, fechaHora);
+            if (fechaHora == null) {
+                volverAlMenu();
+                return;
+            }
 
-            if (reservado) {
-                Turno turno = buscarTurnoEnAgenda(fechaHora);
-                System.out.println("Turno confirmado: " + turno);
+            if (fechaHora.isBefore(LocalDateTime.now())) { // Ayudado por IA: LocalDateTime.now() es la fecha y hora actuales; isBefore compara si una fecha es anterior a otra.
+                System.out.println("No se pueden reservar fechas pasadas. Elija otro horario.");
             } else {
-                System.out.println("Horario inválido u ocupado. "
-                        + "Atendemos de martes a sábado, de 10:00 a 19:30, "
-                        + "en franjas de 30 minutos. Elija otro horario.");
+                reservado = barberia.reservarTurno(
+                        celular, servicio, fechaHora);
+
+                if (reservado) {
+                    Turno turno = buscarTurnoEnAgenda(fechaHora);
+                    System.out.println("Turno confirmado: " + turno);
+                } else {
+                    System.out.println("Horario inválido u ocupado. "
+                            + "Atendemos de martes a sábado, de 10:00 a 19:30, "
+                            + "en franjas de 30 minutos. Elija otro horario.");
+                }
             }
         }
     }
@@ -175,7 +228,11 @@ public class Menu {
         int opcion;
 
         do {
-            opcion = leerEntero("Elija un servicio: ");
+            opcion = leerEntero("Elija un servicio (0 para volver): ");
+
+            if (opcion == 0) {
+                return null;
+            }
 
             if (opcion < 1 || opcion > 3) {
                 System.out.println("Servicio inválido. Elija una opción de la lista.");
@@ -193,6 +250,23 @@ public class Menu {
         }
     }
 
+    // Muestra los turnos ya reservados, para saber qué horarios están ocupados
+    private void mostrarTurnosReservados() {
+        List<Turno> turnos = barberia.verAgenda();
+
+        if (turnos.isEmpty()) {
+            return;
+        }
+
+        System.out.println("Horarios ya reservados:");
+
+        for (int i = 0; i < turnos.size(); i++) {
+            System.out.println(" " + (i + 1) + ". " + turnos.get(i));
+        }
+
+        System.out.println();
+    }
+
     // Busca un turno en la agenda
     private Turno buscarTurnoEnAgenda(LocalDateTime fechaHora) {
         List<Turno> turnos = barberia.verAgenda();
@@ -208,20 +282,46 @@ public class Menu {
         return null;
     }
 
-    // OPCIÓN 3: Cancelar turno
+    // OPCIÓN 3: Cancelar turno (se elige de la lista por número)
     private void cancelarTurno() {
         System.out.println("- CANCELAR TURNO -");
 
-        LocalDateTime fechaHora = leerFechaHora(
-                "Día y hora del turno (dd/MM/yyyy HH:mm): ");
+        List<Turno> turnos = barberia.verAgenda();
 
-        Turno turno = buscarTurnoEnAgenda(fechaHora);
+        if (turnos.isEmpty()) {
+            System.out.println("No hay turnos.");
+            return;
+        }
 
-        if (barberia.cancelarTurno(fechaHora)) {
+        for (int i = 0; i < turnos.size(); i++) {
+            System.out.println(" " + (i + 1) + ". " + turnos.get(i));
+        }
+
+        System.out.println();
+
+        int numero;
+
+        do {
+            numero = leerEntero("Número del turno a cancelar (0 para volver): ");
+
+            if (numero == 0) {
+                volverAlMenu();
+                return;
+            }
+
+            if (numero < 1 || numero > turnos.size()) {
+                System.out.println("Número inválido. Elija un turno de la lista.");
+            }
+
+        } while (numero < 1 || numero > turnos.size());
+
+        Turno turno = turnos.get(numero - 1);
+
+        if (barberia.cancelarTurno(turno.getFechaHora())) {
             System.out.println("Turno cancelado: " + turno);
             System.out.println("El horario quedó libre.");
         } else {
-            System.out.println("No hay ningún turno reservado en ese horario.");
+            System.out.println("No se pudo cancelar el turno.");
         }
     }
 
@@ -242,13 +342,18 @@ public class Menu {
         Atencion ultimoCorte = cliente.ultimoCorte();
 
         if (ultimoCorte == null) {
-            System.out.println("Lo de siempre: Sin cortes registrados");
+            System.out.println("Último corte (lo de siempre): Sin cortes registrados");
         } else {
-            System.out.println("Lo de siempre: "
+            System.out.println("Último corte (lo de siempre): "
                     + ultimoCorte.getDescripcionCorte());
         }
 
-        String descripcion = leerTexto("Descripción del corte realizado: ");
+        String descripcion = leerTexto("Descripción del corte realizado (0 para volver): ");
+
+        if (descripcion == null) {
+            volverAlMenu(); // el turno sigue en la agenda: todavía no se atendió
+            return;
+        }
 
         Atencion atencion = barberia.atenderSiguiente(descripcion);
 
@@ -286,7 +391,13 @@ public class Menu {
     private void consultarCliente() {
         System.out.println("- CONSULTAR CLIENTE -");
 
-        String celular = leerCelular("Celular del cliente: ");
+        String celular = leerCelular("Celular del cliente (0 para volver): ");
+
+        if (celular == null) {
+            volverAlMenu();
+            return;
+        }
+
         Cliente cliente = barberia.consultarCliente(celular);
 
         if (cliente == null) {
@@ -301,9 +412,9 @@ public class Menu {
         Atencion ultimoCorte = cliente.ultimoCorte();
 
         if (ultimoCorte == null) {
-            System.out.println("Lo de siempre: Sin cortes registrados");
+            System.out.println("Último corte (lo de siempre): Sin cortes registrados");
         } else {
-            System.out.println("Lo de siempre: "
+            System.out.println("Último corte (lo de siempre): "
                     + ultimoCorte.getDescripcionCorte());
         }
     }
@@ -335,12 +446,22 @@ public class Menu {
 
     // MÉTODOS DE LECTURA Y VALIDACIÓN
 
+    // Avisa que se vuelve al menú principal
+    private void volverAlMenu() {
+        System.out.println("Volviendo al menú.");
+    }
+
+    // Si el usuario escribe 0, devuelve null para que quien lo llamó vuelva al menú
     public String leerTexto(String mensaje) {
         String texto;
 
         do {
             System.out.print(mensaje);
             texto = scanner.nextLine().trim();
+
+            if (texto.equals(VOLVER)) {
+                return null;
+            }
 
             if (texto.isEmpty()) {
                 System.out.println("El dato no puede estar vacío.");
@@ -365,10 +486,15 @@ public class Menu {
         }
     }
 
+    // Si el usuario escribe 0, devuelve null para volver al menú
     public LocalDateTime leerFechaHora(String mensaje) {
         while (true) {
             System.out.print(mensaje);
             String entrada = scanner.nextLine().trim();
+
+            if (entrada.equals(VOLVER)) {
+                return null;
+            }
 
             try {
                 return LocalDateTime.parse(entrada, FORMATO_FECHA); // Ayudado por IA: conversión de texto a fecha y hora.
@@ -380,9 +506,14 @@ public class Menu {
         }
     }
 
+    // Si el usuario escribe 0, devuelve null para volver al menú
     private String leerCelular(String mensaje) {
         while (true) {
             String celular = leerTexto(mensaje);
+
+            if (celular == null) {
+                return null;
+            }
 
             if (celular.length() >= 8 && celular.length() <= 15) {
                 boolean valido = true;
