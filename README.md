@@ -7,6 +7,7 @@
 - Paul Ferreyra Jaime – dejó la materia el 10/11/2026
 
 **Tablero Kanban:** https://trello.com/b/83efp2ba/grupo5-emprendimiento-digital
+
 **Repositorio:** https://github.com/FabriGaitan97/grupo5-emprendimiento-digital
 
 ## Información general
