@@ -49,7 +49,7 @@ public class Cliente {
         return celular.equals(cliente.celular);
     }
 
-    // Se calcula con el celular, igual que equals
+    // Ayuda IA (Claude): Se calcula con el celular, igual que equals
     @Override
     public int hashCode() {  
         return celular.hashCode();
