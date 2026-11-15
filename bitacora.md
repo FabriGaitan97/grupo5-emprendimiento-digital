@@ -160,8 +160,7 @@ Qué hicimos:
 
 Quién hizo qué:
 - Martina Noel Fernandez: casos de prueba de clientes y turnos, y registro del trabajo del Día 5 y 6. Usé Claude (IA) como apoyo para automatizar la carga de los casos y de apoyo para redactar los resultados.
-- Fabrizio Gaitán: (completar)
-- Kaiken Luciano Garcia Segovia: (completar)
+- Fabrizio Gaitán y Kaiken Luciano Garcia Segovia: adelantaron en el día 5.
 
 Qué nos trabó:
 
