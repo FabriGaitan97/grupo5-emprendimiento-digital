@@ -44,7 +44,9 @@ Lo elegimos porque el problema de una barbería se resuelve de forma natural con
 **Set:**
 - Clientes sin celular repetido (`Set<Cliente>`).
 - Turnos sin horarios superpuestos (`Set<Turno>`).
+
 **Queue (PriorityQueue):** atender los turnos según su día y hora, no según el orden en que se reservaron (`PriorityQueue<Turno>`).
+
 **Stack:**
 - Deshacer la última reserva o cancelación de un turno (pila de operaciones).
 - Recordar "lo de siempre": el último corte de cada cliente (pila de cortes).
