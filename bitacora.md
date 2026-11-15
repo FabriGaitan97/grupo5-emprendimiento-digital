@@ -148,7 +148,7 @@ Martina
 - Por trabajo no pude avanzar el 13/11, así que mis tareas del Día 5 las hice junto con las del Día 6 el 14/11.
 
 Qué sigue:
-- Completar
+- Día 6: casos de prueba normales y de error de cada integrante, README completo y comenzar a preparar la exposición.
 
 Captura del tablero: kanban/dia-5.png
 
