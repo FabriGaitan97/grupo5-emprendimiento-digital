@@ -18,7 +18,7 @@ public class GestorReservas {
         this.reservados = new HashSet<>();
     }
 
-    // Martes a sábado, entre las 10:00 y las 19:30, y minutos 00 o 30
+    // Martes a sábado, entre las 10:00 y las 19:30, y minutos 00 o 30. Ayuda de IA (Claude): getDayOfWeek, getHour y getMinute (fecha y hora) para optimizar el código. 
     public boolean esHorarioValido(LocalDateTime fechaHora) {
         int dia=fechaHora.getDayOfWeek().getValue();
         if(dia==LUNES || dia==DOMINGO){
