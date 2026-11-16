@@ -40,7 +40,8 @@ public class Cliente {
         return cortes.peek();
     }
 
-    // Dos clientes son iguales si tienen el mismo celular. Usamos @Override en equals y hashCode para que dos clientes con el mismo celular sean considerados iguales, y así el HashSet no permita registrarlos dos veces
+    // Dos clientes son iguales si tienen el mismo celular. Usamos @Override en equals y hashCode para que dos clientes con el mismo celular sean considerados iguales, y así el HashSet no permita registrarlos dos veces. 
+    // Basado en el ejemplo de la clase 8 (Sets): el equals de la clase Dragon.
     @Override
     public boolean equals(Object obj) {
         if(this==obj) return true;
