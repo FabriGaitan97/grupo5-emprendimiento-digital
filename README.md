@@ -276,9 +276,7 @@ Lo que usamos y que no está en los apuntes está marcado en los comentarios del
 
 ## Conclusiones
 
-(Borrador: lo revisamos entre los tres.)
-
-- Aprendimos a elegir cada estructura según el problema: el Set evita duplicados de clientes y de horarios, la PriorityQueue ordena los turnos por día y hora y la pila permite deshacer y recordar el último corte.
-- Para que `HashSet` y `PriorityQueue` funcionen con nuestras propias clases tuvimos que programar `equals`, `hashCode` y `compareTo`.
-- Dificultades: pasamos de cuatro a tres integrantes cuando Paul dejó la materia, tuvimos horarios distintos y algunos inconvenientes con Java y con la subida de archivos a GitHub; los fuimos resolviendo con commits chicos y repartiendo los archivos para no pisarnos.
-- Qué mejoraríamos: avisar en el menú si hay un cliente con el mismo nombre y apellido, permitir celulares con "+" y distinguir en el mensaje si un horario está ocupado o es inválido, y guardar los datos en archivos (hoy viven en memoria).
+- Aprendimos a elegir cada estructura según el problema: el Set evita duplicados de clientes y de horarios, la PriorityQueue atiende los turnos por día y hora (y no por orden de reserva) y la pila permite deshacer la última operación y recordar el último corte de cada cliente.
+- Para que HashSet y PriorityQueue funcionen con nuestras propias clases tuvimos que programar equals, hashCode y compareTo.
+- Qué nos trabó: pasamos de cuatro a tres integrantes cuando Paul dejó la materia, tuvimos horarios distintos y algunos inconvenientes con Java y con la subida de archivos a GitHub, y al compilar aparecieron errores de tipeo, llaves y sintaxis. Lo resolvimos con commits chicos, repartiendo los archivos para no pisarnos y probando el programa completo desde la consola.
+- Qué mejoraríamos: avisar en el menú si hay un cliente con el mismo nombre y apellido, permitir celulares con "+", distinguir en el mensaje si un horario está ocupado o es inválido, y guardar los datos en archivos, porque hoy se pierden al cerrar el programa.
