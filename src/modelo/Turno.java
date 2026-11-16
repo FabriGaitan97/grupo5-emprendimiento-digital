@@ -48,7 +48,7 @@ public class Turno implements Comparable<Turno> {
         return fechaHora.hashCode();
     }
 
-    // Ejemplo: Mar 17/11 10:30 - Juan Pérez - Corte
+    // Ejemplo: Mar 17/11 10:30 - Juan Pérez - Corte. Ayuda de IA (Claude): LocalDateTime y DateTimeFormatter (fecha y hora) para optimizar el código.
     @Override
     public String toString() {
         String[]dias={"Lun", "Mar", "Miér", "Jue", "Vie", "Sáb", "Dom"};
