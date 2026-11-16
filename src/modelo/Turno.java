@@ -34,6 +34,7 @@ public class Turno implements Comparable<Turno> {
     }
 
     // Dos turnos son iguales si tienen el mismo día y hora.
+    // Basado en el ejemplo de la clase 8 (Sets): el equals de la clase Dragon. Lo adaptamos para comparar por celular.
     @Override
     public boolean equals(Object obj) {
         if (this==obj) return true;
