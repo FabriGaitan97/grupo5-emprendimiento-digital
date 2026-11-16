@@ -170,3 +170,29 @@ Qué sigue:
 - Día 7: terminar de ordenar todo (README completo con el estado final y las capturas, comentarios en el código con las fuentes y la ayuda de IA citadas, bitácoras completas y tablero al día) y seguir preparando la exposición.
 
 Captura del tablero: kanban/dia-6.png
+
+## Día 7 - 15/11/2026
+(Las últimas tareas se terminaron pasada la medianoche, en la madrugada del 16/11.)
+
+Qué hicimos:
+Martina
+- Terminamos de marcar en el código lo que no está en los apuntes. También citamos la fuente de equals en Cliente y Turno: está basado en el ejemplo de la clase Dragon de la clase 8, adaptado para comparar por celular y por fecha y hora.
+- Agregamos al README la aclaración sobre cómo están marcados los fragmentos hechos con ayuda de IA, y dejamos definitivo el apartado de Conclusiones (antes era un borrador).
+- Hice la revisión final contra el checklist de la consigna y la dejé comentada en la tarjeta: compila, README completo, /docs y /pruebas completas, bitácora y capturas hasta el Día 6.
+Fabrizio
+- Modificó el comentario de la clase TipoOperacion para explicar por qué se usa un enum (y aclarar que fue con ayuda de IA).
+
+Quién hizo qué:
+- Martina Noel Fernandez: comentarios y fuentes en Cliente, Turno, GestorReservas y GestorClientes; aclaración de IA y conclusiones en el README; revisión final del checklist. Usé Claude (IA) como apoyo para armar esos comentarios y revisar el checklist.
+- Fabrizio Gaitán: comentario en TipoOperacion.
+
+Qué nos trabó:
+Martina
+- Dejé lo último para el final: hasta hoy no tenía los comentarios de fuentes en mi módulo, y los hice en el último día.
+
+Qué sigue:
+- Que Fabrizio y Kaiken completen su parte de la bitácora del Día 6.
+- Preparar y ensayar la defensa oral: repasar mi módulo (Set, PriorityQueue, Stack, equals, hashCode y compareTo) para explicarlo y poder modificarlo en vivo.
+
+Captura del tablero: kanban/dia-7.png
+
