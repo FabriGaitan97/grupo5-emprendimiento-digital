@@ -272,6 +272,8 @@ Al probar anotamos mejoras posibles, que están detalladas al final de cada arch
 ## Uso de herramientas de IA
 
 Usamos herramientas de IA como apoyo para entender conceptos y para escribir y revisar partes del código y de la documentación (Claude en el módulo de clientes y turnos, el historial y las pruebas; ChatGPT en el menú).
+Lo que usamos y que no está en los apuntes está marcado en los comentarios del código con "Ayuda de IA" o "Ayudado por IA".
+
 ## Conclusiones
 
 (Borrador: lo revisamos entre los tres.)
