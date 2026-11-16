@@ -46,7 +46,6 @@ public class GestorClientes {
         return new ArrayList<>(clientes);
     }
     private boolean estaVacio(String texto){
-    //Ayuda de IA (Claude): trim() saca los espacios del principio y del final; isEmpty() pregunta si quedó vacío.
         return texto==null || texto.trim().isEmpty();
     }
     //Ayuda de IA (Claude): startsWith, charAt y Character.isDigit son métodos básicos de Java
