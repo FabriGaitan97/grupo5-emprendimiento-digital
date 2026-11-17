@@ -21,7 +21,7 @@
 
 ## Descripción del negocio
 
-Barbería Digital es un emprendimiento ficticio de una barbería con un solo barbero. El sistema, desarrollado en Java y usado por consola, organiza los clientes y los turnos. El barbero atiende de martes a sábado, de 10:00 a 19:30, en franjas de 30 minutos, y ofrece tres servicios: corte ($8000), barba ($5000) y corte y barba ($12000). Los clientes son personas que reservan turno en la barbería, diferenciadas por su número de celular.
+Barbería Digital es un emprendimiento ficticio de una barbería con un solo barbero. El sistema, desarrollado en Java y usado por consola, organiza los clientes y los turnos. El barbero atiende de martes a sábado, de 10:00 a 20, en franjas de 30 minutos, y ofrece tres servicios: corte ($8000), barba ($5000) y corte y barba ($12000). Los clientes son personas que reservan turno en la barbería, diferenciadas por su número de celular.
 
 ## Problema que resuelve
 
